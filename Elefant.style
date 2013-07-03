@@ -1,0 +1,145 @@
+// Elefant style for MultiMarkdown Composer
+// by Wolfgang Reszel
+//
+// Colors can be:
+//		#RGB (with or without the '#')
+//		#RRGGBB
+//		#ARGB (the A is for alpha)
+//		#AARRGGBB
+//
+// List of elements that can have formatting applied:
+//	default
+//	blockquote
+//	bold
+//	boldAndItalic
+//	codeBlock
+//	codeSpan
+//	comment
+//	heading
+//	heading1 - heading6
+//	italic
+//	link - Markdown links, e.g. [foo](bar)
+//	list
+//	math
+//	metadata
+//	table
+//	URL - the actual clickable URL (if enabled)
+{
+	autoZoomHorizontalPadding = 50; // Left and Right padding to use when Auto Zoom is on
+	backgroundColor = eee;			// Color to be used for the background
+	caretColor = 09f;				// Color to be used for the cursor
+	focusMode = 0;					// Should Focus Mode be turned on when this theme is enabled?
+	typewriterMode = 0;				// Should Typewriter Mode be turned on when this theme is enabled?
+	foregroundColor = 000;			// Color to be used for the text
+	markupForegroundColor = 06a;	// Color to be used for markup text foreground
+									// Can also set a background color
+// CSS is applied to the preview pane to allow you to match colors, or apply any other desired formatting
+	css = "body {background:#eee;color:#000;font-family: Menlo; font-size:13px; line-height:150%; text-align: left; padding: 0 20px} h1,h2,h3,h4,h5,h6 {color:#049} h1,h2,h3,h4,h5,h6,ul ul {margin-bottom: 0.4em;} p {margin-top: 0.2em} table { border: solid black; border-width: 2px 0px; empty-cells: hide; border-spacing: 0px; padding: 2px; margin: 20px auto;}table caption { margin: 5px; text-align: center; caption-side: bottom;}thead th { border: solid gray; border-width: 0 0 2px 0; padding: 5px;}thead > tr:last-child > th { border-style: none; }tbody > tr:first-child > td { border: solid gray; border-width: 1px 0 0 0;}tbody > tr:first-child > th { border: solid gray; border-width: 1px 0 0 0;}thead + tbody > tr:first-child > td { border: solid black; border-width: 1px 0 0 0;}thead + tbody > tr:first-child > th { border: solid black; border-width: 1px 0 0 0;} del {background:#fae6e6;} ins {background:#ecfce6} a.footnote, a.citation {font-size: 0.83em; vertical-align: super;} p+ul, p+ol {margin-top:-1em} @media print {body {font-size:12px;}} @page {margin-right:5cm;} code,tt {margin:0 2px; padding:0 5px; white-space:nowrap; border:1px solid #eaeaea; background-color:#f8f8f8; border-radius:3px; font-family:Menlo,monospace; font-size:13px; color:#333} pre>code {margin:0; padding:0; white-space:pre; border:0; background:transparent} pre {background-color:#f8f8f8; border:1px solid #ccc; font-size:13px; line-height:19px; overflow:auto; padding:6px 10px; border-radius:3px} pre code,pre tt {background-color:transparent; border:0} a {color: #36c} a:hover {text-decoration: none}";
+	horizontalPadding = 20;			// Left and Right padding to use when Auto Zoom is off
+	autoZoomHorizontalPadding = 20; // Left and Right padding to use when Auto Zoom is on
+	justifyText = 0;				// Should justification be turned on?
+	lineLength = 75;				// Maximum line length (in characters)
+	lineHeight = 1.5;				// Line spacing ( 1.7 = 170% )
+	defaultFontSize = 13;			// Default Font size
+	defaultFontName = Menlo;		// Default Font
+	monoFontSize = 13;				// Font size to be used for monospaced text
+	monoFontName = Menlo;			// Font to be used for monospaced text (use quotes for multiword names, e.g. "Courier New")
+	default = {						// Default is applied to all text, unless superseded by a more specific setting
+		fontName = Menlo;			// Font to be used for this feature (e.g. default)
+		fontSize = 13;			// Font size to be applied
+		kerning = 0.3;				// Kerning to be applied (look up kerning on internet if you're not sure what this is)
+	};
+	metadata = {					// Formatting to be applied to the metadata at the top of the document
+		foregroundColor = 7000;
+		kerning = 0.2;
+	};
+	heading = {						// General heading formatting
+		fontName = Menlo;
+		foregroundColor = 049;
+		backgroundColor = 1049;
+		bold = 1;					
+	};
+	heading1 = {					// Level 1 headings only
+		fontSize = 22;
+		fontName = Menlo;
+		foregroundColor = 049;
+		backgroundColor = 1049;
+		bold = 1;					
+	};
+	heading2 = {
+		fontSize = 18;
+		fontName = Menlo;
+		foregroundColor = 049;
+		backgroundColor = 1049;
+		bold = 1;					
+	};
+	heading3 = {
+		fontSize = 15;
+		fontName = Menlo;
+		foregroundColor = 049;
+		backgroundColor = 1049;
+		bold = 1;					
+	};
+	heading4 = {
+		fontSize = 13.5;
+		fontName = Menlo;
+		foregroundColor = 049;
+		bold = 1;					
+	};
+	codeSpan =	   {				// Spans of code, e.g. `this is code`
+		mono = 1;					// Use the mono font specified earlier
+	};
+	codeBlock = {					// Verbatim or Code blocks
+		backgroundColor = f8f8f8;
+		mono = 1;
+	};
+	URL = {							// Formatting that is applied to "clickable" links
+		foregroundColor = 36c;
+		underline = 1;				// 1 = single underline
+									// 0 = no underline
+									// 2 = thick underline
+									// 4 = very thick underline
+									// 9 = double underline
+	};
+	bold = {						// We want bold text to be displayed in bold
+		bold = 1;
+	};
+	italic = {						// We want italicized text to be displayed in italics
+		italic = 1;
+	};
+	boldAndItalic  = {				// Any guess what we want here?
+		bold = 1;
+		italic = 1;
+	};
+	comment = {						// HTML comments (e.g. <!-- This is a comment --> )
+		foregroundColor = 8000;
+	};
+	list = {
+		leftIndent = 30;			// Left margin indenting (per list level)
+		rightIndent = 30;			// Right margin indenting (total)
+	};								// Default for all is 30
+	blockquote = {
+		leftIndent = 30;			// Left margin indenting (per blockquote level)
+		rightIndent = 30;			// Right margin indenting (total)
+	};
+	criticAddition = {
+		foregroundColor = 00bb00;
+		markupForegroundColor = 00bb00;
+	};
+	criticDeletion = {
+		foregroundColor = dd0000;
+		markupForegroundColor = dd0000;
+	};
+	criticSubstitution = {
+		foregroundColor = ff8600;
+		markupForegroundColor = ff8600;
+	};
+	criticHighlight = {
+		foregroundColor = aa53a9;
+		markupForegroundColor = aa53a9;
+	};
+	criticComment = {
+		foregroundColor = 0000bb;
+		markupForegroundColor = 0000bb;
+	};
+}
