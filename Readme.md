@@ -8,7 +8,7 @@ This repository contains [MultiMarkdown Composer 2](http://multimarkdown.com/) S
 
 Just open MultiMarkdown Composer 2 and go to:
 
-	preferences -> appearance -> open styles folder
+	preferences → appearance → open styles folder
 	
 Move the styles to this folder
 
